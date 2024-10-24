@@ -48,8 +48,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-    <PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
-    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.90" />
+    <PackageReference Include="CommunityToolkit.Maui" Version="9.1.0" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.92" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -121,7 +121,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.90" />
+	  <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.92" />
 	</ItemGroup>
 
 </Project>
