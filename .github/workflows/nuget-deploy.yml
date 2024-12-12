@@ -23,14 +23,14 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
-      
-    - name: Build
-      run: dotnet build --configuration Release
 
     - name: Extract version from tag
       id: extract_version
       run: |
-        echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+        echo "VERSION=${GITHUB_REF##*/}" >> $GITHUB_ENV
+        
+    - name: Build
+      run: dotnet build --configuration Release
         
     - name: Pack
       run: dotnet pack ./MauiPersianToolkit/MauiPersianToolkit.csproj --configuration Release --no-build --output ./nupkgs /p:PackageVersion=${{ env.VERSION }}
