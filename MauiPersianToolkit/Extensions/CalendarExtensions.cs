@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using MauiPersianToolkit.Extensions;
 
 namespace MauiPersianToolkit;
 public static class CalendarExtensions
@@ -8,7 +9,7 @@ public static class CalendarExtensions
         try
         {
             PersianCalendar pc = new PersianCalendar();
-            var year = pc.GetYear(_date);
+            var year = pc.GetYear(_date) + Constants.Shahanshahi;
             var month = pc.GetMonth(_date);
             var day = pc.GetDayOfMonth(_date);
             return $"{year}/{month.ToString().PadLeft(2, '0')}/{day.ToString().PadLeft(2, '0')}";
@@ -24,7 +25,7 @@ public static class CalendarExtensions
         try
         {
             PersianCalendar pc = new PersianCalendar();
-            var year = pc.GetYear(_date);
+            var year = pc.GetYear(_date) + Constants.Shahanshahi; ;
             var month = pc.GetMonth(_date);
             var day = pc.GetDayOfMonth(_date);
             return $"{year}/{month.ToString().PadLeft(2, '0')}/{day.ToString().PadLeft(2, '0')} {_date.Hour.ToString().PadLeft(2, '0')}:{_date.Minute.ToString().PadLeft(2, '0')}";
@@ -56,7 +57,7 @@ public static class CalendarExtensions
             PersianCalendar pc = new PersianCalendar();
             var date = persianDate.Split('/');
 
-            return new DateTime(int.Parse(date[0]), int.Parse(date[1]), int.Parse(date[2]), hour, minute, 0, pc);
+            return new DateTime(int.Parse(date[0]) + Constants.Shahanshahi, int.Parse(date[1]), int.Parse(date[2]), hour, minute, 0, pc);
         }
         catch (Exception) { return DateTime.Now; }
     }
@@ -66,7 +67,7 @@ public static class CalendarExtensions
         try
         {
             PersianCalendar pc = new PersianCalendar();
-            var year = pc.GetYear(date);
+            var year = pc.GetYear(date) + Constants.Shahanshahi; ;
             var month = pc.GetMonth(date);
 
             return $"{year}/{month.ToString().PadLeft(2, '0')}/01";
@@ -81,7 +82,7 @@ public static class CalendarExtensions
         try
         {
             PersianCalendar pc = new PersianCalendar();
-            var year = pc.GetYear(date);
+            var year = pc.GetYear(date) + Constants.Shahanshahi; ;
             var month = pc.GetMonth(date);
             int monthLength = !pc.IsLeapYear(year) && month == 12 ? 29 : 30;
             return $"{year}/{month.ToString().PadLeft(2, '0')}/{(month < 7 ? 31 : monthLength)}";
@@ -110,7 +111,7 @@ public static class CalendarExtensions
         try
         {
             PersianCalendar pc = new PersianCalendar();
-            var year = pc.GetYear(date);
+            var year = pc.GetYear(date) + Constants.Shahanshahi; ;
             return year;
         }
         catch (Exception)
