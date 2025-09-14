@@ -20,7 +20,7 @@
 		<Authors>azadehkarimian</Authors>
 		<Description>MauiPersianTookit is a comprehensive library for .NET MAUI that provides a variety of Persian language UI controls and components. This library is designed to help developers create modern, cross-platform applications with support for Persian language and right-to-left (RTL) layouts.</Description>
 		<PackageTags>MAUI;UI;;Controls;Toolkit;XAML;.NET;Farsi;Persian;Localization;RightToLeft;RTL;Mobile;CrossPlatform;.NET6;Blazor;MobileDevelopment;UserInterface;Component</PackageTags>
-		<PackageProjectUrl>https://github.com/azadehka/MauiPersianToolkit/tree/shahanshahi-calendar</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/azadehka/MauiPersianToolkit/tree/shahanshahi-calendar/MauiPersianToolkit</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/azadehka/MauiPersianToolkit.git</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
